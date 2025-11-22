@@ -6,6 +6,7 @@ if (form) {
 
     const name = document.querySelector('input[name="name"]').value.trim();
     const email = document.querySelector('input[name="email"]').value.trim().toLowerCase();
+    const role = document.querySelector('input[name="role"]').value.trim();
 
     let submittedEmails = JSON.parse(localStorage.getItem('submittedEmails') || '[]');
 
@@ -16,6 +17,7 @@ if (form) {
 
     document.getElementById('entry-name').value = name;
     document.getElementById('entry-email').value = email;
+    document.getElementById('entry-role').value = role;
 
     submittedEmails.push(email);
     localStorage.setItem('submittedEmails', JSON.stringify(submittedEmails));
