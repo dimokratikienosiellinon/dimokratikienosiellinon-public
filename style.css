@@ -127,13 +127,12 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, '
 }
 
 /* Registration Page Hero */
-.registration-page .content {
-    position: relative;
+.registration-page .registration-hero {
+    position: relative;          /* allows overlay and inner positioning */
     width: 100%;
-    height: auto;
-    min-height: 50vh;
+    height: auto;                /* adjust as needed */
     background-image: url('images/kapodistrias.jpg');
-    background-size: cover;
+    background-size: cover;      /* fills container */
     background-position: center;
     background-repeat: no-repeat;
 
@@ -143,9 +142,10 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, '
     text-align: center;
     padding: 2rem;
     color: white;
+    z-index: 0;  
 }
 
-.registration-page .content::before {
+.registration-page .registration-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -164,12 +164,12 @@ body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, '
     border-radius: 12px;
 }
 
-.registration-page .content h1 {
+.registration-page .registration-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
-.registration-page .content p {
+.registration-page .registration-hero p {
     font-size: 1.2rem;
 }
 
