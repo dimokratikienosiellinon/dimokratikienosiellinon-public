@@ -10,10 +10,7 @@ if (form) {
 
     let submittedEmails = JSON.parse(localStorage.getItem('submittedEmails') || '[]');
 
-    if (submittedEmails.includes(email)) {
-      alert('Αυτό το email έχει ήδη χρησιμοποιηθεί για εγγραφή.');
-      return;
-    }
+    
 
     document.getElementById('entry-name').value = name;
     document.getElementById('entry-email').value = email;
