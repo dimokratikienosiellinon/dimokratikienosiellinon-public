@@ -4,7 +4,7 @@
   --card: #ffffff;
   --accent: #1e88e5; /* light blue */
   --accent-dark: #1565c0;
-  --muted: #adb4c2;
+  --muted: #6b7280;
   --text: #0f1724;
   --radius: 12px;
 }
@@ -76,12 +76,12 @@ body {
 .nav-toggle .hamburger::before { top: -7px; }
 .nav-toggle .hamburger::after { top: 7px; }
 
-/* Hero for Home Page */
+/* Hero - Main Index Page */
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('images/parthenon3.jpg');
+  background-image: url('images/parthenon3.jpg'); /* only main page image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.35); /* overlay */
   z-index: 0;
 }
 .hero .hero-inner {
@@ -110,97 +110,7 @@ body {
 .hero .hero-inner h1 { font-size: 3rem; margin-bottom: 1rem; }
 .hero .hero-inner p { font-size: 1.3rem; margin-bottom: 1.5rem; }
 
-/* About Page Hero */
-.about-page .about-hero {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 40vh;
-  background-image: url('images/GreekFlag-Α.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  color: white;
-}
-.about-page .about-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.35);
-  z-index: 0;
-}
-.about-page .about-hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  padding: 1.5rem;
-  border-radius: 12px;
-}
-.about-page .about-hero-inner h1 { font-size: 2.6rem; margin-bottom: 0.8rem; }
-.about-page .about-hero-inner p { font-size: 1.2rem; }
-
-/* Registration Page Hero */
-.registration-page .registration-hero {
-  position: relative;
-  width: 100%;
-  height: 60vh; /* increased height to reduce cropping */
-  background-image: url('images/kapodistrias.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(9, 8, 8);
-}
-.registration-page .registration-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.35);
-  z-index: 0;
-}
-.registration-page .registration-hero-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-}
-.registration-page .registration-hero-inner h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.registration-page .registration-hero-inner p { font-size: 1.2rem; }
-
-/* Registration Form Card */
-.registration-page .form-section {
-  max-width: 700px;
-  margin: -5rem auto 2rem auto; /* pull form over hero */
-  padding: 2rem;
-  background: rgba(255,255,255,0.95);
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(16,24,40,0.1);
-  position: relative;
-  z-index: 1;
-  color: #1e1e1e; /* form text color */
-}
-.registration-page .form-section h2 { color: #0f1724; }
-.registration-page .form-section label span { color: #1e1e1e; }
-.registration-page .form-section input,
-.registration-page .form-section select,
-.registration-page .form-section textarea { color: #1e1e1e; background: #fff; }
-.registration-page .form-section input::placeholder,
-.registration-page .form-section textarea::placeholder { color: #6b7280; }
-.registration-page .form-section .btn.primary { color: white; }
-.registration-page .form-section .btn.secondary { color: var(--accent); }
-
-/* Features */
+/* Features Section */
 .features {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -219,7 +129,7 @@ body {
 
 /* Content Sections */
 .content { padding: 28px 20px; }
-.section, .section-container {
+.section {
   max-width: 900px;
   margin: 0 auto;
   background: var(--card);
@@ -228,8 +138,32 @@ body {
   box-shadow: 0 6px 20px rgba(16,24,40,0.03);
 }
 
+/* Forms */
+.container { max-width: 700px; margin: 0 auto; }
+.field { display: block; margin-bottom: 12px; }
+.field span { display: block; margin-bottom: 6px; font-weight: 600; }
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+  background: #fff;
+}
+.form-actions { display: flex; gap: 12px; margin-top: 12px; }
+.btn.secondary {
+  background: #fff;
+  border: 1px solid #dbeafe;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* Footer */
-.site-footer { padding: 20px; text-align: center; color: var(--muted); margin-top: 36px; }
+.site-footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 36px;
+}
 
 /* Responsive */
 @media (max-width:900px) { .features { grid-template-columns: repeat(2,1fr); } }
@@ -254,18 +188,12 @@ body {
   .site-nav::-webkit-scrollbar { width: 6px; }
   .site-nav::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.2); border-radius: 3px; }
   .site-nav.show { display: flex; }
-  .registration-page .registration-hero { height: 40vh; }
-  .registration-page .registration-hero-inner h1 { font-size: 2rem; }
-  .registration-page .registration-hero-inner p { font-size: 1rem; }
+
   .hero { height: 75vh; padding: 1.5rem; }
   .hero .hero-inner h1 { font-size: 2.1rem; }
   .hero .hero-inner p { font-size: 1rem; }
-  .about-hero { height: 45vh; padding: 1.5rem; }
-  .about-hero-inner h1 { font-size: 2rem; }
-  .about-hero-inner p { font-size: 1rem; }
 }
 @media (max-width:480px) {
-  .about-hero { height: 30vh; }
   .hero { height: 65vh; }
   .hero .hero-inner h1 { font-size: 1.7rem; }
 }
