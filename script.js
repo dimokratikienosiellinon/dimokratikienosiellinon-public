@@ -1,25 +1,36 @@
-const form = document.getElementById('registrationForm');
+/* ===================== script.js ===================== */
 
-if (form) {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    const name = document.querySelector('input[name="name"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim().toLowerCase();
-    
+// Navigation toggle (hamburger)
+(function(){
+const btn = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.site-nav');
+if(!btn || !nav) return;
 
-    let submittedEmails = JSON.parse(localStorage.getItem('submittedEmails') || '[]');
 
-    
+btn.addEventListener('click', function(){
+const expanded = this.getAttribute('aria-expanded') === 'true';
+this.setAttribute('aria-expanded', String(!expanded));
+nav.classList.toggle('show');
+});
 
-    document.getElementById('entry-name').value = name;
-    document.getElementById('entry-email').value = email;
-    
 
-    submittedEmails.push(email);
-    localStorage.setItem('submittedEmails', JSON.stringify(submittedEmails));
-
-    alert('Ευχαριστούμε πολύ! Θα σας ανακατευθυνθείτε σε μια φόρμα για συμπλήρωση email.');
-    setTimeout(() => form.submit(), 100);
-  });
+// Close nav when clicking outside on mobile
+document.addEventListener('click', function(e){
+if(!nav.classList.contains('show')) return;
+const isClickInside = nav.contains(e.target) || btn.contains(e.target);
+if(!isClickInside){
+nav.classList.remove('show');
+btn.setAttribute('aria-expanded','false');
 }
+});
+
+
+// Close nav on link click (helpful on mobile)
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+if(nav.classList.contains('show')){
+nav.classList.remove('show');
+btn.setAttribute('aria-expanded','false');
+}
+}));
+})();
