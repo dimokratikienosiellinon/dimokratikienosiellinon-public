@@ -74,6 +74,28 @@ input[type=text],input[type=email],select,textarea{width:100%;padding:12px;borde
 @media (max-width:700px){
 .features{grid-template-columns:1fr}
 .nav-toggle{display:inline-block}
-.site-nav{position:fixed;top:64px;right:16px;background:rgba(255,255,255,0.98);flex-direction:column;gap:8px;padding:12px;border-radius:10px;box-shadow:0 8px 30px rgba(16,24,40,0.12);display:none}
+.site-nav {
+    position: fixed;
+    top: 64px;
+    right: 16px;
+    background: rgba(255,255,255,0.98);
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(16,24,40,0.12);
+    display: none;
+    max-height: calc(100vh - 80px); /* adjust 80px based on header height */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+}
+.site-nav::-webkit-scrollbar {
+    width: 6px; /* Chrome/Safari */
+}
+.site-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
 .site-nav.show{display:flex}
 }
