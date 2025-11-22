@@ -67,5 +67,17 @@
   <div class="footer-small">Επικοινωνία: dimokratikienosiellinon@gmail.com</div>
 </footer>
 <script src="script.js"></script>
+<script>
+  // Prevent double-clicks on registration links
+  document.querySelectorAll('a[href="registration_page.html"]').forEach(link => {
+    link.addEventListener('click', function(e){
+      if(this.dataset.clicked) {
+        e.preventDefault(); // prevent second navigation
+        return;
+      }
+      this.dataset.clicked = true;
+    });
+  });
+</script>
 </body>
 </html>
