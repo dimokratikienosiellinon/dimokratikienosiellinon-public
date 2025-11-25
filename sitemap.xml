@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://example.com/</loc>
+        <loc>https://dimokratikienosiellinon.github.io/</loc>
         <priority>1.0</priority>
         <changefreq>weekly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/index.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/index.html</loc>
         <priority>1.0</priority>
         <changefreq>weekly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/about.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/about.html</loc>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/manifesto.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/manifesto.html</loc>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/policies.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/policies.html</loc>
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/values.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/values.html</loc>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/leadership.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/leadership.html</loc>
         <priority>0.7</priority>
         <changefreq>monthly</changefreq>
     </url>
 
     <url>
-        <loc>https://example.com/registration_page.html</loc>
+        <loc>https://dimokratikienosiellinon.github.io/registration_page.html</loc>
         <priority>0.9</priority>
         <changefreq>monthly</changefreq>
     </url>
